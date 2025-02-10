@@ -1,6 +1,7 @@
 package edu.thiago.domain.model;
 
 import jakarta.persistence.*;
+
 import java.util.List;
 
 @Entity(name = "tb_user")
@@ -18,7 +19,7 @@ public class User {
     @OneToOne(cascade = CascadeType.ALL)
     private Card card;
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)//FetchType retorna uma lista quando o usuário realiza uma busca
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Feature> features;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
@@ -71,4 +72,5 @@ public class User {
     public void setNews(List<News> news) {
         this.news = news;
     }
+
 }

@@ -16,7 +16,7 @@ public class Account {
 
     private String agency;
 
-    @Column(nullable = false, precision = 13, scale = 2)
+    @Column(precision = 13, scale = 2)
     private BigDecimal balance;
 
     @Column(name = "additional_limit", precision = 13, scale = 2)
@@ -61,4 +61,5 @@ public class Account {
     public void setLimit(BigDecimal limit) {
         this.limit = limit;
     }
+
 }
