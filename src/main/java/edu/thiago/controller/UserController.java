@@ -34,12 +34,4 @@ public class UserController {
         return ResponseEntity.created(location).body(userCreated);
     }
 
-    @RestController
-    @RequestMapping("/favicon.ico")
-    public class FaviconController {
-        @GetMapping
-        public ResponseEntity<Void> returnNoFavicon() {
-            return ResponseEntity.noContent().build();
-        }
-    }
 }
